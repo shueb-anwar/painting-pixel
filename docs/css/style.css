@@ -1,0 +1,158 @@
+/* 
+	Style.css
+	Auther: Shueb Anwar <shuaib.mbd@gmail.com>;
+	License: none (public domain)
+*/
+
+html, body, div, fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+input[type="color"] {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    display: block;;
+}
+
+body {
+	line-height: 1;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 10px auto;
+}
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#wrapper {
+  display: grid;
+  grid-gap: 0px;
+  /*grid-template-rows: repeat(var(--grid-rows), 1fr);*/
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  margin: 40px 0 30px 30px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.grid-item {
+	height: 40px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+.grid-item input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.grid-item label {
+	display: block;
+	height: 100%;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #f3f3f3;
+}
+
+.btn-col,
+.btn-row {
+	position: absolute;
+	border: 1px solid #e3e3e3;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn-col {
+	left: -29px;
+	bottom: 0;
+	top: 0;
+	width: 20px;
+}
+
+.btn-row {
+	top: -29px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 26px;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+.btn-warning {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    color: #000;
+    background-color: #ffca2c;
+    border-color: #ffc720;
+}
